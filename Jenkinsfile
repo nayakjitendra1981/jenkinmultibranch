@@ -1,4 +1,4 @@
-node('built-in') 
+node('built-in') 		
 {
     stage('Continuous Download-mybranch') 
 	{
@@ -10,7 +10,7 @@ node('built-in')
 	}
     stage('Continuous Deployment-mybranch') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.34.46:/var/lib/tomcat8/webapps/qaenv.war'
+sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.34.46:/var/lib/tomcat9/webapps/qaenv.war'
 	}
     stage('Continuous Testing'-mybranch) 
 	{
@@ -18,6 +18,6 @@ sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/weba
 	}
     stage('Continuous Delivery-mybranch') 
 	{
-		sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.41.63:/var/lib/tomcat8/webapps/prodenv.war'
+		sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.41.63:/var/lib/tomcat9/webapps/prodenv.war'
 	}
 }
