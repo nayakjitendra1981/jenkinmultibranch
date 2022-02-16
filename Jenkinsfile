@@ -10,9 +10,9 @@ node('built-in')
 	}
     stage('Continuous Deployment-mybranch') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.34.46:/var/lib/tomcat9/webapps/qaenv.war'
+		sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.34.46:/var/lib/tomcat9/webapps/qaenv.war'
 	}
-    stage('Continuous Testing'-mybranch) 
+    stage('Continuous Testing-mybranch) 
 	{
               sh label: '', script: 'echo "Testing Passed"'
 	}
