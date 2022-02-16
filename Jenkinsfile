@@ -12,7 +12,7 @@ node('built-in')
 	{
       sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.34.46:/var/lib/tomcat9/webapps/qaenv.war'
 	}
-    stage('Continuous Testing-master) 
+    stage('Continuous Testing-master') 
 	{
               sh label: '', script: 'echo "Testing Passed"'
 	}
