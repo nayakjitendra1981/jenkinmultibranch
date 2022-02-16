@@ -3,7 +3,7 @@ node('built-in')
     stage('Continuous Download-mybranch') 
 	{
     git 'https://github.com/sunildevops77/maven.git'
-
+	}
     stage('Continuous Build-mybranch') 
 	{
     sh label: '', script: 'mvn package'
